@@ -9,7 +9,7 @@ export const processMessengerRequest = async(messageText: string): Promise<Messa
 
      const commandText = getCommandFromMessage(messageText);
      if (commandText === "") {
-        return getMessageRequestResponseError("Oops, nie znam tej komendy :o");
+        return getMessageRequestResponseError("Oops, I don't know this command :o");
      }
      
      const command = createCommand(commandText);

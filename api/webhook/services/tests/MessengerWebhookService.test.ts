@@ -5,8 +5,8 @@ jest.mock('../../../JokeApi', () => ({
   }))
 
 test('processes request and return no command found ', async () => {
-    await processMessengerRequest("#notexistingcommand siema co tam").then(result => expect(result.error).toBe('Oops, nie znam tej komendy :o'));
-    await processMessengerRequest("#notexistingcommand#notexi siema co tam").then(result => expect(result.error).toBe('Oops, nie znam tej komendy :o'));
+    await processMessengerRequest("#notexistingcommand siema co tam").then(result => expect(result.error).toBe("Oops, I don't know this command :o"));
+    await processMessengerRequest("#notexistingcommand#notexi siema co tam").then(result => expect(result.error).toBe("Oops, I don't know this command :o"));
     await processMessengerRequest("existingcommand siema co tam").then(result => expect(result.error).toBe('Potrzebuje #<komenda> zeby wykonać Twoje polecenie :('));
 })
 
