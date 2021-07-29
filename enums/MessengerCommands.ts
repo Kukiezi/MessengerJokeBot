@@ -1,6 +1,6 @@
 'use strict';
 
 export const messengerCommand = {
-    REMIND_ME: "remindme",
+    INSTRUCTION: "instruction",
     JOKE: "joke",
 }
