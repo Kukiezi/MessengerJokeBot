@@ -13,10 +13,9 @@ export const processMessengerRequest = async(messageText: string): Promise<Messa
      }
      
      const command = createCommand(commandText);
-     const jokeResult = await command.processCommand()
+     const messageResult = await command.processCommand()
 
-     return getMessageRequestResponse(jokeResult);
-     return getMessageRequestResponse('Request was processed successfully')
+     return getMessageRequestResponse(messageResult);
 }
 
 const getMessageRequestResponse = (result: string) => {
